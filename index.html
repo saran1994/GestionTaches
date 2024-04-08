@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPlanning</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="myform">
+    <h2>GPlanning</h2>
+    <div class="form">
+      
+      <form id="todo-form" >
+      <label for="task">Ajouter une tache</label>
+     <input id="task" type="text" placeholder="Ajouter une tâche" aria-label="Saisir la tache" ><br>
+
+     <label for="due-date">Date</label>
+            <input type="date" id="due-date" aria-label="Saisir la date" ><br>
+
+     <label for="priority">Priorité</label>
+            <select id="priority">
+                <option value="">Choisir...</option>
+                <option value="Elevée">Elevée</option>
+                <option value="Faible">Faible</option>
+                
+            </select><br>
+
+    <label for="status">Status</label>
+            <select id="status">
+                <option value="">Choisir...</option>
+                <option value="En cours">En cours</option>
+                <option value="Terminé">Terminé</option>
+            </select><br>
+     <button type="submit" class="btn" >Valider</button>
+
+    </form>
+    </div>
+   
+</div> 
+
+<table id="tasks-table" >
+    <thead>
+        <tr>
+            <th>Tâche</th>
+            <th>Date d'échéance</th>
+            <th>Priorité</th>
+            <th>Statut</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="tasks-body">
+    </tbody>
+</table>
+     
+     
+ </div>
+ 
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
