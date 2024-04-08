@@ -18,6 +18,7 @@ body {
    .container {
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
      width: 800px;
      display: flex;
      margin: 0 auto;
@@ -42,7 +43,7 @@ body {
   }
    
    h2 {
-     margin-left: 35%;
+     margin-left: 13%;
     
      
    }
@@ -82,7 +83,7 @@ body {
      position: relative;
     margin: 0 140px;
     height: 50px;
-    width: 180px;
+    width: 150px;
     display: block;
     background-color: var(--back-color-btn);
     border-radius: 30px;
@@ -94,27 +95,7 @@ body {
     overflow: hidden;
     box-shadow: 0 4px 15px var(--back-color-tertiaire);
    }
-   
-   ul {
-     width: 100%;
-     list-style: none;
-     padding: 0;
-     justify-content: space-between;
-     
-   }
-   
-   li {
-     width: 100%;
-     display: flex;
-     align-items: center;
-     justify-content: flex-start;
-     background-color: var(--back-color-secondaire);
-     padding: 10px;
-     border-radius: 5px;
-     margin-bottom: 10px;
-     box-shadow: 0 2px 4px var(--back-color-tertiaire);
-   }
-   
+  
  
  .delete{
     width: 100px;
@@ -157,6 +138,22 @@ td {
     border: 1px solid var(--back-color-principal);
     padding: 8px;
 }
-@media screen and (max-width:750PX){
-
+@media screen and (max-width:650PX){
+  
+.table-container{
+  max-width: 380px;
+  overflow: scroll;
+}
+.container{
+  max-width: 350px;
+}
+  .myform{
+    width: 350px;
+  }
+ .form{
+  margin-left: 0;
+ }
+ label{
+  margin-left: 10;
+ }
 }
