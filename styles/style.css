@@ -13,6 +13,7 @@ body {
      margin: 0;
      font-family: Arial, sans-serif;
      height: 100vh;
+     
    }
  
    .container {
@@ -42,11 +43,29 @@ body {
     
   }
    
-   h2 {
-     margin-left: 33%;
-    
-     
-   }
+
+   .waviy {
+    margin-left: 33%;
+  }
+  .waviy span {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    color: #000000;
+    margin-bottom : 10px;
+    margin-top: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+  }
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
+
+   
    
    input , select{
      width: 300px;
@@ -89,19 +108,19 @@ body {
      border: none;
      cursor: pointer;
      position: relative;
-    margin: 0 140px;
-    height: 50px;
-    width: 150px;
-    display: block;
-    background-color: var(--back-color-btn);
-    border-radius: 30px;
-    text-decoration: none;
-    color: var(--back-color-secondaire);
-    font-size: 18px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px var(--back-color-tertiaire);
+     margin: 0 140px;
+     height: 50px;
+     width: 150px;
+     display: block;
+     background-color: var(--back-color-btn);
+     border-radius: 30px;
+     text-decoration: none;
+     color: var(--back-color-secondaire);
+     font-size: 18px;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+     overflow: hidden;
+     box-shadow: 0 4px 15px var(--back-color-tertiaire);
    }
   
  
@@ -132,6 +151,10 @@ table {
     border: 2px solid var(--back-color-secondaire);
     margin-top: 20px;
 }
+.table-container{
+  max-height: 200px;
+    overflow: scroll;
+}
 
 /* Style des cellules de l'en-tête */
 th {
@@ -147,6 +170,7 @@ td {
     padding: 8px;
 }
 
+
 .popup {
   display: none;
   position: fixed;
@@ -154,23 +178,31 @@ td {
   left: 85%;
   text-align: center;
   transform: translate(-50%, -50%);
-  background-color: var(--back-color-principal); /* Jaune avec opacité */
+  background-color: var(--back-color-principal); 
   border: 1px solid var(--back-color-principal);
   padding: 20px;
   box-shadow: 0 0 10px var(--back-color-secondaire);
   font-weight: bold;
   opacity: 0.9; /* Opacité de la fenêtre contextuelle */
- width: 200px;
+  width: 200px;
+  color: #ffffff;
   }
+
+ 
+  
 @media screen and (max-width:650PX){
   
 .table-container{
   max-width: 380px;
   overflow: scroll;
+  max-height: 200px;
+  overflow-y: scroll;
 }
+
 .container{
   max-width: 350px;
 }
+
   .myform{
     width: 350px;
   }

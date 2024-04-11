@@ -1,6 +1,7 @@
 $(document).ready(function() {
     let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
+    // Mise à jour du tableau
     function displayTasks() {
         $('#tasks-body').empty();
         tasks.forEach(function(task, index) {
@@ -16,6 +17,7 @@ $(document).ready(function() {
 
     displayTasks();
 
+    // Ajout
     $('#todo-form').submit(function(event) {
         event.preventDefault();
         if (this.checkValidity()) {
@@ -33,6 +35,7 @@ $(document).ready(function() {
         }
     });
 
+    // Suppression
     $(document).on('click', '.delete', function() {
         let index = $(this).data('index');
         tasks.splice(index, 1);
@@ -41,6 +44,7 @@ $(document).ready(function() {
         showMessage('Tâche supprimée avec succès');
     });
 
+    // Affichage du message
     function showMessage(message) {
         let popup = document.getElementById('popup');
         let popupMessage = document.getElementById('popup-message');
