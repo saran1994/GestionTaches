@@ -43,7 +43,7 @@ body {
   }
    
    h2 {
-     margin-left: 13%;
+     margin-left: 33%;
     
      
    }
@@ -60,6 +60,10 @@ body {
      
    }
 
+   input:invalid {
+    border: 1px solid red;
+}
+
    select{
     width: 318px;
     padding: 10px;
@@ -68,6 +72,10 @@ body {
     border-radius: 10px;
     height: 40px;
   }
+
+  select:invalid {
+    border: 1px solid red;
+}
 
   label{
     font-weight: bold;
@@ -138,6 +146,22 @@ td {
     border: 1px solid var(--back-color-principal);
     padding: 8px;
 }
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 7%;
+  left: 85%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  background-color: var(--back-color-principal); /* Jaune avec opacité */
+  border: 1px solid var(--back-color-principal);
+  padding: 20px;
+  box-shadow: 0 0 10px var(--back-color-secondaire);
+  font-weight: bold;
+  opacity: 0.9; /* Opacité de la fenêtre contextuelle */
+ width: 200px;
+  }
 @media screen and (max-width:650PX){
   
 .table-container{

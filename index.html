@@ -9,19 +9,26 @@
 <body>
 
   <div class="container">
+    
     <div class="myform">
+        <div id="popup" class="popup">
+            <span id="popup-message"></span>
+        </div>
+
+        
     <h2>GPlanning</h2>
+
     <div class="form">
       
       <form id="todo-form" >
       <label for="task">Ajouter une tache</label>
-     <input id="task" type="text" placeholder="Ajouter une tâche" aria-label="Saisir la tache" ><br>
+     <input id="task" type="text" placeholder="Ajouter une tâche" aria-label="Saisir la tache" required ><br>
 
      <label for="due-date">Date</label>
-            <input type="date" id="due-date" aria-label="Saisir la date" ><br>
+            <input type="date" id="due-date" aria-label="Saisir la date" required><br>
 
      <label for="priority">Priorité</label>
-            <select id="priority">
+            <select id="priority" required>
                 <option value="">Choisir...</option>
                 <option value="Elevée">Elevée</option>
                 <option value="Faible">Faible</option>
@@ -41,6 +48,7 @@
    
 </div> 
 <div class="table-container">
+
 <table id="tasks-table" >
     <thead>
         <tr>
