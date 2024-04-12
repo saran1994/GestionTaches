@@ -3,23 +3,30 @@ $(document).ready(function() {
 
     // Mise à jour du tableau
     function displayTasks() {
+        // Recupérer l'élément avec l'id et vider son contenu 
         $('#tasks-body').empty();
-        tasks.forEach(function(task, index) {
-            $('#tasks-body').append('<tr>' +
-                '<td>' + task.task + '</td>' +
-                '<td>' + task.dueDate + '</td>' +
-                '<td>' + task.priority + '</td>' +
-                '<td>' + task.status + '</td>' +
-                '<td><button class="delete" data-index="' + index + '">Supprimer</button></td>' +
-                '</tr>');
-        });
+        if (tasks.length === 0) {
+            // Afficher un message si le tableau est vide
+            $('#tasks-body').append('<tr><td colspan="5">Aucune tâche à afficher</td></tr>');
+        } else {
+            tasks.forEach(function(task, index) {
+                // Sauvegarde des nouvelles données saisies dans le formulaire
+                $('#tasks-body').append('<tr>' +
+                    '<td>' + task.task + '</td>' +
+                    '<td>' + task.dueDate + '</td>' +
+                    '<td>' + task.priority + '</td>' +
+                    '<td>' + task.status + '</td>' +
+                    '<td><button class="delete" data-index="' + index + '">Supprimer</button></td>' +
+                    '</tr>');
+            });
+        }
     }
 
     displayTasks();
 
     // Ajout
     $('#todo-form').submit(function(event) {
-        event.preventDefault();
+        
         if (this.checkValidity()) {
             let task = $('#task').val();
             let dueDate = $('#due-date').val();
