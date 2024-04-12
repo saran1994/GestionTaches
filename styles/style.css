@@ -75,6 +75,7 @@ body {
      border-radius: 10px;
      height: 25px;
      padding: 10px;
+     
 
      
    }
@@ -152,8 +153,11 @@ table {
     margin-top: 20px;
 }
 .table-container{
-  max-height: 200px;
-    overflow: scroll;
+  max-height: 150px;
+  overflow-y: scroll;
+    
+    
+   
 }
 
 /* Style des cellules de l'en-tête */
@@ -168,6 +172,9 @@ th {
 td {
     border: 1px solid var(--back-color-principal);
     padding: 8px;
+    max-width: 200px;
+    
+    /* word-wrap: break-word; */
 }
 
 
